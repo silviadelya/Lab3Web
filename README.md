@@ -64,21 +64,20 @@ Pastikan webserver Apache dan MySQL server sudah dijalankan. Kemudian buka melal
 1. Buat file baru dengan nama **index.php**, lalu simpan ke dalam folder **lab3_php_database**.
 2. Kemudian ketikkan kode berikut :
 
-    ```php
+    ```html
     <?php
     include_once("koneksi.php");
-    
     $sql = 'SELECT * FROM data_barang';
     $result = mysqli_query($conn, $sql);
     ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>Data Barang</title>
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <title>Data Barang</title>
+    </head>
+    <body>
     <div class="container">
         <h1>Data Barang</h1>
         <div class="main">
@@ -116,8 +115,8 @@ Pastikan webserver Apache dan MySQL server sudah dijalankan. Kemudian buka melal
             </table>
         </div>
     </div>
-</body>
-</html>
+    </body>
+    </html>
     ```
 
 3. Tampilannya akan seperti berikut :
@@ -130,7 +129,7 @@ Pastikan webserver Apache dan MySQL server sudah dijalankan. Kemudian buka melal
 1. Buat file baru dengan nama **tambah.php**, lalu simpan ke dalam folder **lab3_php_database**.
 2. Kemudian ketikkan kode berikut :
 
-    ```php
+    ```html
     <?php
     error_reporting(E_ALL);
     include_once 'koneksi.php';
@@ -154,21 +153,19 @@ Pastikan webserver Apache dan MySQL server sudah dijalankan. Kemudian buka melal
     $result = mysqli_query($conn, $sql);
     header('location: index.php');
     }
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>Tambah Barang</title>
-</head>
-
-<body>
-    <div class="container">
-        <h1>Tambah Barang</h1>
-        <div class="main">
-            <form method="post" action="tambah.php" enctype="multipart formdata">
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <title>Tambah Barang</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Tambah Barang</h1>
+            <div class="main">
+                <form method="post" action="tambah.php" enctype="multipart formdata">
                 <div class="input">
                     <label>Nama Barang</label>
                     <input type="text" name="nama" />
@@ -203,8 +200,8 @@ Pastikan webserver Apache dan MySQL server sudah dijalankan. Kemudian buka melal
             </form>
         </div>
     </div>
-</body>
-</html>
+    </body>
+    </html>
     ```
 
 3. Tampilannya akan seperti berikut :
@@ -221,7 +218,7 @@ Pastikan webserver Apache dan MySQL server sudah dijalankan. Kemudian buka melal
 1. Buat file baru dengan nama **ubah.php**, lalu simpan ke dalam folder **lab3_php_database**.
 2. Kemudian ketikkan kode berikut :
 
-    ```php
+    ```html
     <?php
     error_reporting(E_ALL);
     include_once 'koneksi.php';
@@ -262,17 +259,15 @@ Pastikan webserver Apache dan MySQL server sudah dijalankan. Kemudian buka melal
     if ($var == $val) return 'selected="selected"';
     return false;
     }
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>Ubah Barang</title>
-</head>
-
-<body>
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <title>Ubah Barang</title>
+    </head>
+    <body>
     <div class="container">
         <h1>Ubah Barang</h1>
         <div class="main">
@@ -312,8 +307,8 @@ Pastikan webserver Apache dan MySQL server sudah dijalankan. Kemudian buka melal
             </form>
         </div>
     </div>
-</body>
-</html>
+    </body>
+    </html>
     ```
 
 3. Tampilannya akan seperti berikut :
